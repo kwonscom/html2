@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(주)비에이텍 | 산업용 펌프 설계 및 유지관리 솔루션</title>
+    <meta name="description" content="산업용 펌프 제조, 설치, 정밀 조립 및 유지관리 토탈 엔지니어링 솔루션 기업 (주)비에이텍입니다.">
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Icons: FontAwesome 6 & Lucide -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Smooth Scroll: Lenis CDN -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+</head>
+<body>
+
+    <!-- Header & GNB (Global Navigation Bar) -->
+    <header id="header">
+        <div class="container navbar">
+            <!-- Logo -->
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <div class="logo-text">
+                    <span class="logo-title" style="font-weight: 800; font-size: 1.4rem; color: var(--primary); letter-spacing: -0.5px;">(주)비에이텍</span>
+                    <span class="logo-sub" style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; display: block; margin-top: -2px;">B-ATEC Engineering</span>
+                </div>
+            </a>
+
+            <!-- GNB Navigation Menu (1Depth & 2Depth) -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">회사소개</a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item"><a href="about.html" class="dropdown-link">회사소개</a></li>
+                        <li class="dropdown-item"><a href="about.html#history" class="dropdown-link">연혁</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link">제품 및 기술</a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item"><a href="products.html" class="dropdown-link">설비장비</a></li>
+                        <li class="dropdown-item"><a href="products.html#tech-data" class="dropdown-link">기술자료</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="performance.html" class="nav-link">실적 및 인증</a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item"><a href="performance.html" class="dropdown-link">사업실적</a></li>
+                        <li class="dropdown-item"><a href="performance.html#certs" class="dropdown-link">인증/특허</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="faq.html" class="nav-link">자주묻는질문</a>
+                    <ul class="dropdown">
+                        <li class="dropdown-item"><a href="faq.html" class="dropdown-link">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Staff Access Button (Far Right End) -->
+            <div class="header-utility">
+                <a href="https://notebooklm.google.com/notebook/d00c4b87-93cd-4db6-b6ef-a87954ec0ac6" class="staff-btn" target="_blank">
+                    <i data-lucide="lock" style="width: 14px; height: 14px;"></i>
+                    <span>직원전용 (자료실)</span>
+                </a>
+            </div>
+
+            <!-- Hamburger Button for Mobile -->
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Dropdown Panel -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul class="mobile-menu-list">
+            <li class="mobile-nav-item">
+                <a href="about.html" class="mobile-nav-link">회사소개</a>
+                <ul class="mobile-submenu">
+                    <li><a href="about.html" class="mobile-submenu-link">회사소개</a></li>
+                    <li><a href="about.html#history" class="mobile-submenu-link">연혁</a></li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="products.html" class="mobile-nav-link">제품 및 기술</a>
+                <ul class="mobile-submenu">
+                    <li><a href="products.html" class="mobile-submenu-link">설비장비</a></li>
+                    <li><a href="products.html#tech-data" class="mobile-submenu-link">기술자료</a></li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="performance.html" class="mobile-nav-link">실적 및 인증</a>
+                <ul class="mobile-submenu">
+                    <li><a href="performance.html" class="mobile-submenu-link">사업실적</a></li>
+                    <li><a href="performance.html#certs" class="mobile-submenu-link">인증/특허</a></li>
+                </ul>
+            </li>
+            <li class="mobile-nav-item">
+                <a href="faq.html" class="mobile-nav-link">자주묻는질문</a>
+            </li>
+        </ul>
+        <div class="mobile-utility">
+            <a href="https://notebooklm.google.com/notebook/d00c4b87-93cd-4db6-b6ef-a87954ec0ac6" class="staff-btn" target="_blank">
+                <i data-lucide="lock" style="width: 16px; height: 16px;"></i>
+                <span>직원전용 (자료실)</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-color: #002D5A; background-image: url('./hero_bg.png'); background-size: cover; background-position: center; position: relative;">
+        <div class="hero-blueprint-bg" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 40px 40px; z-index: 1;"></div>
+        <div class="hero-overlay" style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0, 45, 90, 0.85) 0%, rgba(11, 25, 44, 0.95) 100%); z-index: 2;"></div>
+        <div class="container" style="position: relative; z-index: 3;">
+            <div class="hero-layout" style="display: flex; align-items: center; justify-content: space-between; gap: 60px; flex-wrap: wrap;">
+                <div class="hero-text-content" style="flex: 1; min-width: 340px; max-width: 650px; z-index: 3;">
+                    <div class="hero-badge reveal">
+                        <span class="hero-badge-dot"></span>
+                        <span class="font-outfit">Premium Engineering Solutions</span>
+                    </div>
+                    <h1 class="reveal">
+                        독보적인 기술력으로<br>
+                        <span class="text-accent">펌프의 가치</span>를 더합니다
+                    </h1>
+                    <p class="reveal">
+                        (주)비에이텍은 최첨단 스마트 팩토리 라인과 엄격한 품질관리를 통해 산업용 펌프의 생산부터 정밀 유지보수까지 신뢰할 수 있는 엔지니어링 파트너십을 제시합니다.
+                    </p>
+                    <div class="hero-actions reveal">
+                        <a href="products.html" class="btn btn-primary">
+                            <span>설비 장비 살펴보기</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="about.html" class="btn btn-secondary">회사 정보 보기</a>
+                    </div>
+                </div>
+                
+                <div class="hero-space reveal" style="flex: 1; min-width: 300px;">
+                    <!-- Purely visual spacer layout for clean background showcase -->
+                </div>
+            </div>
+        </div>
+        <!-- Scroll Down Mouse Indicator -->
+        <div class="absolute-indicator" style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--silver); opacity: 0.6;">
+            <span class="font-outfit" style="font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">Scroll</span>
+            <div style="width: 1px; height: 40px; background: linear-gradient(to bottom, var(--accent) 50%, transparent 100%);"></div>
+        </div>
+    </section>
+
+    <!-- Credibility & Core Values Section -->
+    <section class="section-padding" style="background: var(--bg-light); position: relative;">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Core Capabilities</span>
+                <h2 class="section-title">비에이텍의 핵심 경쟁력</h2>
+                <p class="section-desc">우리는 보이지 않는 배관 속 미세한 흐름부터 거대한 수송 인프라까지, 무결점 신뢰 엔지니어링을 지향합니다.</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Card 1 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i data-lucide="cpu" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>독창적 원천 기술</h3>
+                    <p>정밀 기계 및 전자기 제어 시스템을 결합한 지능형 부스터 펌프 제어로 에너지 효율과 가동 신뢰도를 획기적으로 상승시켰습니다.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i data-lucide="droplet" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>최적 효율 설계</h3>
+                    <p>최첨단 유체 해석 모델(CFD) 설계를 기반으로 내부 유로 저항을 최소화하여 장시간 고속 가동에도 에너지 손실을 완벽히 방지합니다.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i data-lucide="shield-check" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>안전 무결점 원칙</h3>
+                    <p>품질경영시스템(ISO 9001) 인증 및 위생안전인증(KC) 기준 하에 초정밀 모터 밸런싱 검사를 통과한 안전성만을 현장에 인도합니다.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="feature-card reveal">
+                    <div class="feature-icon">
+                        <i data-lucide="clock" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>24/7 신속 대응</h3>
+                    <p>현장의 유기적인 연속성을 위해 설비 중단 리스크 발생 시 즉각 응답하는 기술 지원팀이 상시 대기하여 생산 차질을 예방합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manufacturing Overview Section (Grid layout pattern) -->
+    <section class="section-padding" style="background: var(--white);">
+        <div class="container">
+            <div class="layout-grid">
+                <!-- Image Frame Column -->
+                <div class="img-frame reveal" style="aspect-ratio: 4/3;">
+                    <img src="./assembly_line.png" alt="비에이텍 정밀 조립 자동화라인" loading="lazy">
+                </div>
+                
+                <!-- Content Column -->
+                <div class="reveal" style="display: flex; flex-direction: column; gap: 28px;">
+                    <span class="section-tag" style="text-align: left; margin-bottom: 0;">State-of-the-art Facilities</span>
+                    <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">최첨단 정밀 설비 및<br>품질 경영 기반 생산</h2>
+                    <p style="color: var(--text-muted); font-size: 1.05rem;">
+                        비에이텍 공장은 엄격한 품질 공정 표준에 따라 자동화 설계가 탑재되어 있습니다. 펌프 모터 조립, 고압 주파수 성능 테스트 벤치, 내부식 특수 코팅 마감까지 전체 공정이 고도로 유기적으로 컨트롤되어 무결점 품질을 보증합니다.
+                    </p>
+                    <div style="display: flex; gap: 16px; margin-top: 10px;">
+                        <a href="products.html" class="btn btn-dark">설비 현황 보기</a>
+                        <a href="performance.html" class="btn btn-secondary" style="border-color: var(--border-color); color: var(--text-dark);">인증서 다운로드</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact Form Section -->
+    <section class="section-padding" style="background: var(--bg-light); border-top: 1px solid var(--border-color);">
+        <div class="container" style="max-width: 900px;">
+            <div class="section-header reveal">
+                <span class="section-tag">Quick Inquiry</span>
+                <h2 class="section-title">신속 견적 및 제작 문의</h2>
+                <p class="section-desc">요청사항을 남겨주시면 담당 엔지니어가 신속하게 연락드리겠습니다.</p>
+            </div>
+            
+            <div class="contact-box reveal" style="background: var(--white); padding: 40px; border-radius: var(--border-radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+                <form id="quickContactForm" onsubmit="event.preventDefault(); alert('문의가 성공적으로 접수되었습니다. 담당자가 신속히 연락드리겠습니다.'); this.reset();" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                    <div style="grid-column: span 1;">
+                        <label for="contactName" style="display: block; font-weight: 700; color: var(--primary); margin-bottom: 8px; font-size: 0.95rem;">회사명 / 성함 <span style="color: var(--accent);">*</span></label>
+                        <input type="text" id="contactName" required placeholder="예: (주)비에이텍 / 홍길동" style="width: 100%; padding: 12px 16px; border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); font-size: 0.95rem; background: var(--bg-light); outline: none; transition: var(--transition-fast);">
+                    </div>
+                    <div style="grid-column: span 1;">
+                        <label for="contactPhone" style="display: block; font-weight: 700; color: var(--primary); margin-bottom: 8px; font-size: 0.95rem;">연락처 <span style="color: var(--accent);">*</span></label>
+                        <input type="tel" id="contactPhone" required placeholder="예: 010-0000-0000" style="width: 100%; padding: 12px 16px; border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); font-size: 0.95rem; background: var(--bg-light); outline: none; transition: var(--transition-fast);">
+                    </div>
+                    <div style="grid-column: span 2;">
+                        <label style="display: block; font-weight: 700; color: var(--primary); margin-bottom: 8px; font-size: 0.95rem;">문의 유형 <span style="color: var(--accent);">*</span></label>
+                        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.95rem;">
+                                <input type="radio" name="inquiryType" value="제작" checked style="accent-color: var(--accent); width: 18px; height: 18px;"> 펌프 제작
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.95rem;">
+                                <input type="radio" name="inquiryType" value="설치" style="accent-color: var(--accent); width: 18px; height: 18px;"> 펌프 설치/시공
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 0.95rem;">
+                                <input type="radio" name="inquiryType" value="수리" style="accent-color: var(--accent); width: 18px; height: 18px;"> 펌프 수리/유지보수
+                            </label>
+                        </div>
+                    </div>
+                    <div style="grid-column: span 2;">
+                        <label for="contactMessage" style="display: block; font-weight: 700; color: var(--primary); margin-bottom: 8px; font-size: 0.95rem;">문의 내용 <span style="color: var(--accent);">*</span></label>
+                        <textarea id="contactMessage" required rows="4" placeholder="펌프 사양, 수리 대상 정보 등을 자유롭게 적어주세요." style="width: 100%; padding: 12px 16px; border: 1px solid var(--border-color); border-radius: var(--border-radius-sm); font-size: 0.95rem; background: var(--bg-light); outline: none; transition: var(--transition-fast); resize: vertical; font-family: inherit;"></textarea>
+                    </div>
+                    <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 16px; margin-top: 10px;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 14px 20px; font-size: 1.05rem; font-weight: 700;">
+                            <span>문의사항 제출하기</span>
+                            <i data-lucide="send"></i>
+                        </button>
+                        
+                        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 10px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                            <a href="tel:033-264-9243" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600; color: var(--primary); border-color: var(--border-color);">
+                                <i data-lucide="phone-call" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                                <span>전화 견적 문의: 033-264-9243</span>
+                            </a>
+                            <a href="mailto:contact@baetech.co.kr" class="btn btn-secondary" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600; color: var(--primary); border-color: var(--border-color);">
+                                <i data-lucide="mail" style="width: 16px; height: 16px; color: var(--accent);"></i>
+                                <span>이메일 문의하기</span>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="floating-orbs">
+            <div class="floating-orb orb-blue"></div>
+            <div class="floating-orb orb-dark"></div>
+        </div>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon" style="background: var(--accent);">
+                            <i data-lucide="droplets"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-title">(주)비에이텍</span>
+                            <span class="logo-sub" style="color: var(--white); opacity: 0.6;">B-ATEC Engineering</span>
+                        </div>
+                    </a>
+                    <p class="footer-desc">
+                        비에이텍은 정밀 공학 연구와 무결점 고객 지원을 바탕으로 공공 인프라 및 대형 플랜트 펌프 기술의 선두에 서 있습니다.
+                    </p>
+                </div>
+                <div class="footer-links-col">
+                    <h5 class="footer-links-title">주요 메뉴</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">회사소개</a></li>
+                        <li><a href="products.html" class="footer-link">제품 및 기술</a></li>
+                        <li><a href="performance.html" class="footer-link">실적 및 인증</a></li>
+                        <li><a href="faq.html" class="footer-link">자주묻는질문</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-col">
+                    <h5 class="footer-links-title">기술 센터</h5>
+                    <ul class="footer-links">
+                        <li><a href="./maintenance_guide.pdf" class="footer-link" target="_blank">유지관리 지침서 (PDF)</a></li>
+                        <li><a href="./company_profile.pdf" class="footer-link" target="_blank">비에이텍 지명원 (PDF)</a></li>
+                        <li><a href="./brochure.pdf" class="footer-link" target="_blank">카탈로그/브로슈어 (PDF)</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px;">
+                <div style="display: flex; gap: 20px; align-items: flex-end; flex-wrap: wrap;">
+                    <div class="map-container" style="width: 100%; max-width: 300px; height: 300px; flex-shrink: 0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+                        <iframe src="https://maps.google.com/maps?q=강원특별자치도%20춘천시%20퇴계공단2길%2064&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; filter: grayscale(20%);" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="footer-info" style="display: flex; flex-direction: column; justify-content: flex-end; gap: 4px;">
+                        <span>(주)비에이텍 | 대표이사: 조세연 | 사업자등록번호: 221-81-79342</span>
+                        <span>본사 및 공장: 강원특별자치도 춘천시 퇴계공단2길 64</span>
+                        <span>T. 033-264-9243 | F. 033-264-9244</span>
+                    </div>
+                </div>
+                <p class="copyright" style="margin-bottom: 0;">&copy; 2026 B-ATEC Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Layout Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Lenis Smooth Scroll Initialisation
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Header Transparency on Scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Hamburger Menu Logic (Mobile Nav)
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            
+            // Disable scroll when mobile nav is active
+            if (mobileNav.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Intersection Observer for scroll entrance animations (Reveal)
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target); // Trigger once
+                }
+            });
+        };
+
+        const revealObserver = new IntersectionObserver(revealCallback, {
+            root: null,
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach(element => {
+            revealObserver.observe(element);
+        });
+    </script>
+    <script src="audio-control.js"></script>
+    <script src="custom.js"></script>
+</body>
+</html>
